@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const response = await fetch('ttp://ec2-34-207-162-62.compute-1.amazonaws.com:8080/contact');
+    const response = await fetch('http://ec2-34-207-162-62.compute-1.amazonaws.com:8080/contact');
     const body = await response.json();
     this.setState({ contacts: body, isLoading: false });
   }
