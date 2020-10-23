@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Welcome from './components/Welcome.jsx';
 import Contacts from './components/Contacts.jsx'
-import NavBar from "./components/navbar";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
   state = {
@@ -13,13 +11,9 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const response = await fetch('/contact');
+    const response = await fetch('ttp://ec2-34-207-162-62.compute-1.amazonaws.com:8080/contact');
     const body = await response.json();
     this.setState({ contacts: body, isLoading: false });
-  }
-
-  async boom() {
-    alert('greg');
   }
 
   render() {
@@ -29,24 +23,10 @@ class App extends Component {
       return <p>Loading...</p>;
     }
 
-
     return (
         <div className="App">
+          <ToastContainer />
           <Contacts/>
-          {/*<header className="App-header">*/}
-          {/*  <Contacts/>*/}
-            {/*<Welcome name="Sara" />*/}
-            {/*<img src={logo} className="App-logo" alt="logo" />*/}
-            {/*<div className="App-intro">*/}
-              {/*<h2>JUG List</h2>*/}
-              {/*{groups.map(group =>*/}
-              {/*    <div key={group.id}>*/}
-              {/*      {group.name}*/}
-              {/*    </div>*/}
-              {/*)}*/}
-        {/*    </div>*/}
-        {/*  </header>*/}
-        {/*</div>*/}
         </div>
     );
   }

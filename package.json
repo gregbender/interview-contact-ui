@@ -1,7 +1,7 @@
 {
   "name": "code-ui",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://s3.amazonaws.com/gregbender.interview.hosting",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,10 +10,14 @@
     "@types/node": "^12.12.70",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "antd": "^4.7.2",
     "axios": "^0.20.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-scripts": "3.4.4",
+    "react-toastify": "^6.0.9",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
@@ -22,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "http://34.207.162.62:8080",
   "eslintConfig": {
     "extends": "react-app"
   },
